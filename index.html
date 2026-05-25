@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="contenedor"><!-- //nombre, apellido, cargo y correo electrónico corporativo// -->
+        <h1>Registrar Cuenta</h1>
+
+        <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Juan">
+            <p id="error-nombre" class="error"></p>
+        </div>
+
+        <div class="campo">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Perez">
+            <p id="error-apellido" class="error"></p>
+        </div>
+
+        <div class="campo">
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" placeholder="Empleado">
+            <p id="error-cargo" class="error"></p>
+        </div>
+
+        <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="text" id="correo" placeholder="JuanPerez@empresa.cl">
+            <p id="error-correo" class="error"></p>
+        </div>
+
+        <button id="registrar-btn">Registrarse</button>
+
+    </div>
     <header></header>
     <main></main>
     <footer></footer>
-    
+
     
 </body>
 </html>
