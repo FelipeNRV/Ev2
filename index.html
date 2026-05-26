@@ -1,66 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Colaboradores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Registro de Colaboradores</h1>
 
-    <form class="contenedor"><!-- //nombre, apellido, cargo y correo electrónico corporativo// -->
-        <h1>Formulario de Registro</h1>
-
+      <form class="formulario" id="formulario">
+        <!-- //nombre, apellido, cargo y correo electrónico corporativo// -->
         <div class="campo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Juan">
-            <p id="error-nombre" class="error"></p>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Juan" />
+          <p id="error-nombre" class="error"></p>
         </div>
 
         <div class="campo">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" placeholder="Perez">
-            <p id="error-apellido" class="error"></p>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" placeholder="Perez" />
+          <p id="error-apellido" class="error"></p>
         </div>
 
         <div class="campo">
-            <label for="cargo">Cargo</label>
-            <input type="text" id="cargo" placeholder="Empleado">
-            <p id="error-cargo" class="error"></p>
+          <label for="cargo">Cargo</label>
+          <input type="text" id="cargo" placeholder="Empleado" />
+          <p id="error-cargo" class="error"></p>
         </div>
 
         <div class="campo">
-            <label for="correo">Correo electrónico</label>
-            <input type="text" id="correo" placeholder="JuanPerez@empresa.cl">
-            <p id="error-correo" class="error"></p>
+          <label for="correo">Correo electrónico</label>
+          <input type="text" id="correo" placeholder="JuanPerez@empresa.cl" />
+          <p id="error-correo" class="error"></p>
         </div>
 
-        <button id="registrar-btn">Registrarse</button>
+        <button type="submit" id="registrar-btn">Registrarse</button>
+      </form>
 
-    </form>
+      <p id="mensaje"></p>
 
-    <div>
-        <table border="1">
-        <h2>Colaboradores Registrados</h2>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Cargo</th>
-                    <th>Correo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
+      <input
+        type="text"
+        id="busqueda"
+        placeholder="Buscar por nombre o cargo"
+      />
 
-                </tr>
-            </tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cargo</th>
+            <th>Correo</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+
+        <tbody id="tablacolaboradores"></tbody>
+      </table>
     </div>
-    <header></header>
-    <main></main>
-    <footer></footer>
 
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
