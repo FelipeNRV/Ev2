@@ -8,29 +8,71 @@
 /* BODY */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   background-color: #f4f4f4;
+
   color: #333;
+
   min-height: 100vh;
-  padding: 40px;
+
+  padding: 120px 40px 70px;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: #2f2f2f;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 18px;
+
+  font-size: 26px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
 }
 
 /* CONTENEDOR */
 .contenedor {
   background-color: #ffffff;
+
   width: 100%;
   max-width: 900px;
+
   padding: 35px;
+
+  margin-top: 40px;
+
   border-radius: 14px;
+
   border: 1px solid #e5e5e5;
+
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
   animation: aparecer 0.4s ease;
 }
 
 /* ANIMACIÓN */
 @keyframes aparecer {
+
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -40,44 +82,60 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
-/* TITULOS */
+/* TITULO */
 h1 {
   text-align: center;
+
   margin-bottom: 30px;
-  font-size: 30px;
+
+  font-size: 32px;
+
   font-weight: 600;
+
   color: #222;
 }
 
 /* FORMULARIO */
 .formulario {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 20px;
 }
 
 /* CAMPOS */
 .campo {
   display: flex;
+
   flex-direction: column;
 }
 
 label {
   margin-bottom: 6px;
+
   font-size: 14px;
+
   font-weight: 500;
+
   color: #555;
 }
 
 /* INPUTS */
 input {
   padding: 12px;
+
   border: 1px solid #d6d6d6;
+
   border-radius: 8px;
+
   background-color: #fafafa;
+
   font-size: 14px;
+
   transition: 0.2s ease;
 }
 
@@ -87,73 +145,104 @@ input:hover {
 
 input:focus {
   outline: none;
+
   border-color: #2f2f2f;
+
   background-color: white;
+
   box-shadow: 0 0 0 3px rgba(47, 47, 47, 0.1);
 }
 
-/* BOTÓN */
+/* BOTONES */
 button {
   grid-column: span 2;
+
   width: 100%;
+
   padding: 13px;
+
   border: none;
+
   border-radius: 8px;
+
   background-color: #2f2f2f;
+
   color: white;
+
   font-size: 15px;
+
   font-weight: 500;
+
   cursor: pointer;
+
   transition: 0.2s ease;
+
   letter-spacing: 0.5px;
 }
 
 button:hover {
   background-color: #1f1f1f;
+
   transform: scale(1.01);
 }
 
 /* MENSAJES */
 .error {
   margin-top: 5px;
+
   font-size: 12px;
+
   color: #c0392b;
 }
 
 #mensaje {
   margin-top: 20px;
+
   text-align: center;
+
   font-weight: 500;
 }
 
 /* BUSCADOR */
 #busqueda {
   width: 100%;
-  margin-top: 30px;
+
+  margin-top: 35px;
+
   margin-bottom: 20px;
 }
 
 /* TABLA */
 table {
   width: 100%;
+
   border-collapse: collapse;
+
   background-color: white;
+
   border-radius: 10px;
+
   overflow: hidden;
-  margin-top: 10px;
+
+  margin-top: 20px;
+
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
 thead {
   background-color: #2f2f2f;
+
   color: white;
 }
 
 th,
 td {
   padding: 14px;
+
   text-align: left;
+
   border-bottom: 1px solid #eaeaea;
+
   font-size: 14px;
 }
 
@@ -167,8 +256,12 @@ tbody tr:hover {
 
 /* BOTÓN ELIMINAR */
 td button {
+  width: auto;
+
+  padding: 8px 14px;
+
   background-color: #c0392b;
-  padding: 8px 12px;
+
   font-size: 13px;
 }
 
@@ -176,10 +269,39 @@ td button:hover {
   background-color: #992d22;
 }
 
+/* FOOTER */
+footer {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: #2f2f2f;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 8px;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
   body {
-    padding: 20px;
+    padding: 120px 20px 70px;
   }
 
   .contenedor {
@@ -196,6 +318,7 @@ td button:hover {
 
   table {
     display: block;
+
     overflow-x: auto;
   }
 
@@ -203,4 +326,5 @@ td button:hover {
   td {
     font-size: 13px;
   }
+
 }
