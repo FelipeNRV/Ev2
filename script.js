@@ -5,7 +5,7 @@ const apellido_input = document.getElementById("apellido");
 const cargo_input = document.getElementById("cargo");
 const correo_input = document.getElementById("correo");
 
-// variables para los mensajes de error indivuaduales 
+// variables para los mensajes de error individuales 
 const error_nombre = document.getElementById("error-nombre");
 const error_apellido = document.getElementById("error-apellido");
 const error_cargo = document.getElementById("error-cargo");
@@ -14,14 +14,14 @@ const mensaje = document.getElementById("mensaje");
 
 // variables de la tabla y buscador
 
-// cuerpo de la tabla y donde los colaborades seran agregados
+// cuerpo de la tabla y donde los colaboradores seran agregados
 const tabla = document.getElementById("tabla-colab");
 //input buscador
 const buscador = document.getElementById("busqueda");
 //boton de registro
 const btn = document.getElementById("registrar-btn");
 
-// areglo donde se almacenaran los colaboradores
+// arreglo donde se almacenaran los colaboradores
 let colaboradores = [];
 
 // funcion reutilizable para mostrar los colaboradores en la tabla
