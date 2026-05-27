@@ -128,10 +128,10 @@ formulario.addEventListener("submit", function (event){
   }
 });
 
-// evento keyuyp del buscador
+// evento keyup del buscador
 buscador.addEventListener("keyup", function(){
   const texto = buscador.value.toLowerCase();
 
   //se llama a la funcion de filtrado
   filtrarTabla(texto);
-})
+});
