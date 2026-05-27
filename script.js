@@ -1,11 +1,11 @@
-// variables del registro (formulario)
+// variables del registro y formulario
 const formulario = document.getElementById("formulario");
 const nombre_input = document.getElementById("nombre");
 const apellido_input = document.getElementById("apellido");
 const cargo_input = document.getElementById("cargo");
 const correo_input = document.getElementById("correo");
 
-// variables para los mensajes de error
+// variables para los mensajes de error indivuaduales 
 const error_nombre = document.getElementById("error-nombre");
 const error_apellido = document.getElementById("error-apellido");
 const error_cargo = document.getElementById("error-cargo");
@@ -13,18 +13,24 @@ const error_correo = document.getElementById("error-correo");
 const mensaje = document.getElementById("mensaje");
 
 // variables de la tabla y buscador
+
+// cuerpo de la tabla y donde los colaborades seran agregados
 const tabla = document.getElementById("tabla-colab");
+//input buscador
 const buscador = document.getElementById("busqueda");
+//boton de registro
 const btn = document.getElementById("registrar-btn");
 
-// areglo de colaboradores
+// areglo donde se almacenaran los colaboradores
 let colaboradores = [];
 
-// funcion reutilizable para renderizar tabla
+// funcion reutilizable para mostrar los colaboradores en la tabla
 function renderizarTabla(lista) {
-  tabla.innerHTML = ""; // limpia la tabla antes de dibujarla 
-
+// limpia la tabla antes de volver a dibujarla 
+  tabla.innerHTML = ""; 
+// recorre cada colaborador del arreglo 
   lista.forEach(function(colaborador, index){
+// agrega filas dinamicamente a la tabla
     tabla.innerHTML += `
       <tr>
         <td>${colaborador.nombre}</td>
@@ -39,13 +45,15 @@ function renderizarTabla(lista) {
   });
 }
 
-// funcion reutilizable para eliminar 
+// funcion que elimina colaboradores del arreglo usando su posicion  
 function eliminarColaborador(index) {
-  colaboradores.splice(index, 1);//elimina elementos del arreglo
-  renderizarTabla(colaboradores);
+  //splice elimina elementos del arreglo
+  colaboradores.splice(index, 1);
+  //actualiza la tabla despues de eliminar
+  renderizarTabla(colaboradores); 
 }
 
-//  funcion reutilizable para validacion de datos
+// validaciones individuales de campos vacios y formato del correo
 function validarDatos(nombre, apellido, cargo, correo){
   let esValido = true;
 
@@ -56,7 +64,6 @@ function validarDatos(nombre, apellido, cargo, correo){
   error_correo.textContent = "";
   mensaje.textContent = "";
 
-  // validaciones individuales
   if (nombre === ""){
     error_nombre.textContent = "El nombre es obligatorio.";
     esValido = false;
@@ -80,7 +87,8 @@ function validarDatos(nombre, apellido, cargo, correo){
 
   return esValido;
 }
-// funcion para filtrar reutilizable 
+
+// funcion para filtrar reutilizable por nombre o cargo del colaborador
 function filtrarTabla(texto) {
   const filtrados = colaboradores.filter(function(colaborador){
     return(
@@ -90,10 +98,11 @@ function filtrarTabla(texto) {
   });
   renderizarTabla(filtrados);
 }
-//evento submit del formulario 
+//evento que se ejecuta al registrar un colaborador 
 formulario.addEventListener("submit", function (event){
+  // evita recargar la pagina
   event.preventDefault();
-
+  // obtiene valores ingresados por el usuario 
   const nombre = nombre_input.value.trim();
   const apellido = apellido_input.value.trim();
   const cargo = cargo_input.value.trim();
