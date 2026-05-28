@@ -57,6 +57,8 @@ function eliminarColaborador(index) {
 function validarDatos(nombre, apellido, cargo, correo){
   let esValido = true;
 
+  const regexTexto = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
   // limpiar mensajes previos
   error_nombre.textContent = "";
   error_apellido.textContent = "";
@@ -67,11 +69,25 @@ function validarDatos(nombre, apellido, cargo, correo){
   if (nombre === ""){
     error_nombre.textContent = "El nombre es obligatorio.";
     esValido = false;
+    
+  } else if (!regexTexto.test(nombre)) {
+
+    error_nombre.textContent = "El nombre solo puede contener letras.";
+
+    esValido = false;
   }
+
     if (apellido === ""){
     error_apellido.textContent = "El apellido es obligatorio.";
     esValido = false;
+
+  } else if (!regexTexto.test(apellido)) {
+
+    error_apellido.textContent = "El apellido solo puede contener letras.";
+
+    esValido = false;
   }
+  
     if (cargo === ""){
     error_cargo.textContent = "El cargo es obligatorio.";
     esValido = false;
