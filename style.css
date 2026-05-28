@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
@@ -22,7 +20,6 @@ body {
   align-items: flex-start;
 }
 
-/* HEADER */
 header {
   position: fixed;
 
@@ -50,7 +47,6 @@ header {
   z-index: 1000;
 }
 
-/* CONTENEDOR */
 .contenedor {
   background-color: #ffffff;
 
@@ -70,7 +66,6 @@ header {
   animation: aparecer 0.4s ease;
 }
 
-/* ANIMACIÓN */
 @keyframes aparecer {
 
   from {
@@ -85,7 +80,6 @@ header {
 
 }
 
-/* TITULO */
 h1 {
   text-align: center;
 
@@ -98,7 +92,6 @@ h1 {
   color: #222;
 }
 
-/* FORMULARIO */
 .formulario {
   display: grid;
 
@@ -107,7 +100,6 @@ h1 {
   gap: 20px;
 }
 
-/* CAMPOS */
 .campo {
   display: flex;
 
@@ -124,7 +116,6 @@ label {
   color: #555;
 }
 
-/* INPUTS */
 input {
   padding: 12px;
 
@@ -153,7 +144,6 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(47, 47, 47, 0.1);
 }
 
-/* BOTONES */
 button {
   grid-column: span 2;
 
@@ -186,7 +176,6 @@ button:hover {
   transform: scale(1.01);
 }
 
-/* MENSAJES */
 .error {
   margin-top: 5px;
 
@@ -203,7 +192,6 @@ button:hover {
   font-weight: 500;
 }
 
-/* BUSCADOR */
 #busqueda {
   width: 100%;
 
@@ -212,7 +200,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* TABLA */
 table {
   width: 100%;
 
@@ -254,7 +241,6 @@ tbody tr:hover {
   background-color: #f8f8f8;
 }
 
-/* BOTÓN ELIMINAR */
 td button {
   width: auto;
 
@@ -269,7 +255,6 @@ td button:hover {
   background-color: #992d22;
 }
 
-/* FOOTER */
 footer {
   position: fixed;
 
@@ -297,7 +282,6 @@ footer p {
   margin: 0;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
 
   body {
